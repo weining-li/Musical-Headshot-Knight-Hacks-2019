@@ -1,4 +1,4 @@
-#Sat Mar 02 16:05:04 EST 2019
-base.0=D\:\\F\\SDK\\MyApplication\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
+#Sun Mar 03 11:46:06 EST 2019
+base.0=D\:\\F\\SDK\\Hyperlinktest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
 path.0=classes.dex
 renamed.0=classes.dex

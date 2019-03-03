@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\F\\SDK\\MyApplication\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fa\\values-fa.xml",
+            "outputFile": "D:\\F\\SDK\\Hyperlinktest\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fa\\values-fa.xml",
             "map": [
                 {
                     "source": "C:\\Users\\L\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\900588e937cd90cc01742761ef9716d3\\res\\values-fa\\values-fa.xml",
