@@ -43,13 +43,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Context context = getApplicationContext();
+        Toast toast = Toast.makeText(context, "Welcome!", Toast.LENGTH_LONG);
+        toast.show();
+
 
         final ArrayList<String> anger = new ArrayList<>(Arrays.asList("https://www.youtube.com/watch?v=Wv0KwOEYKU4", "https://www.youtube.com/watch?v=qeMFqkcPYcg", "https://www.youtube.com/watch?v=FLZS3jQPnKw", "https://www.youtube.com/watch?v=l9PxOanFjxQ", "https://www.youtube.com/watch?v=iC8oP4Z_xPw"));
         final ArrayList<String> sad = new ArrayList<>(Arrays.asList("https://www.youtube.com/watch?v=k4V3Mo61fJM", "https://www.youtube.com/watch?v=CjxugyZCfuw", "https://www.youtube.com/watch?v=j3BA0IQd_lA", "https://www.youtube.com/watch?v=Xn676-fLq7I", "https://www.youtube.com/watch?v=DzwkcbTQ7ZE"));
         final ArrayList<String> happy = new ArrayList<>(Arrays.asList("https://www.youtube.com/watch?v=ZbZSe6N_BXs", "https://www.youtube.com/watch?v=09R8_2nJtjg", "https://www.youtube.com/watch?v=cmSbXsFE3l8", "https://www.youtube.com/watch?v=ru0K8uYEZWw", "https://www.youtube.com/watch?v=7PCkvCPvDXk"));
         final ArrayList<String> disgusted = new ArrayList<>(Arrays.asList("https://www.youtube.com/watch?v=y6120QOlsfU", "https://www.youtube.com/watch?v=wZZ7oFKsKzY", "https://www.youtube.com/watch?v=pBI3lc18k8Q", "https://www.youtube.com/watch?v=jofNR_WkoCE", "https://www.youtube.com/watch?v=HMUDVMiITOU"));
         final ArrayList<String> neutral = new ArrayList<>(Arrays.asList("https://www.youtube.com/watch?v=DDgdoPSkPnM", "https://www.youtube.com/watch?v=Cl8a9b76GMg", "https://www.youtube.com/watch?v=CPF9eIBBV7c", "https://www.youtube.com/watch?v=qq-RGFyaq0U", "https://www.youtube.com/watch?v=oHg5SJYRHA0"));
-        final ArrayList<String> suprise = new ArrayList<>(Arrays.asList("https://www.youtube.com/watch?v=R3WwcsjWPIQ", "https://www.youtube.com/watch?v=U9FzgsF2T-s", "https://www.youtube.com/watch?v=9OPc7MRm4Y8", "https://www.youtube.com/watch?v=yRh-dzrI4Z4", "https://www.youtube.com/watch?v=zHalXjs0cDA"));
+        final ArrayList<String> surprise = new ArrayList<>(Arrays.asList("https://www.youtube.com/watch?v=R3WwcsjWPIQ", "https://www.youtube.com/watch?v=U9FzgsF2T-s", "https://www.youtube.com/watch?v=9OPc7MRm4Y8", "https://www.youtube.com/watch?v=yRh-dzrI4Z4", "https://www.youtube.com/watch?v=zHalXjs0cDA"));
         final ArrayList<String> contempt = new ArrayList<>(Arrays.asList("https://www.youtube.com/watch?v=6LAPFM3dgag", "https://www.youtube.com/watch?v=FCi2u265wxQ", "https://www.youtube.com/watch?v=-YcwR89cfao", "https://www.youtube.com/watch?v=HMjQygwPI1c", "https://www.youtube.com/watch?v=75x6DncZDgI"));
         final ArrayList<String> fear = new ArrayList<>(Arrays.asList("https://www.youtube.com/watch?v=w0ZHlp6atUQ", "https://www.youtube.com/watch?v=cPAbx5kgCJo\n", "https://www.youtube.com/watch?v=2aqpF-MwyUs", "https://www.youtube.com/watch?v=TZ0pXUb5jVU", "https://www.youtube.com/watch?v=PAD_E1kaYuY"));
         File angry = new File("src/main/java/com/example/hyperlinktest/angry.txt");
@@ -82,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                     int i = rand.nextInt(5);
                     url = happy.get(i);
 
-                } else if (emo.equals("Murderous")) {
+                } else if (emo.equals("Calm")) {
                     int i = rand.nextInt(5);
                     url = neutral.get(i);
 
@@ -92,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
 
                 } else if (emo.equals("Surprised")) {
                     int i = rand.nextInt(5);
-                    url = suprise.get(i);
+                    url = surprise.get(i);
 
                 } else {
                     url = "https://en.wikipedia.org/wiki/HTTP_404";
@@ -172,6 +176,9 @@ public class MainActivity extends AppCompatActivity {
             Bitmap photo = (Bitmap) data.getExtras().get("data");
             detectAndFrame(photo);
         }
+        Context context = getApplicationContext();
+        Toast toast = Toast.makeText(context, "Good Choice!", Toast.LENGTH_LONG);
+        toast.show();
     }
 
 
@@ -296,7 +303,7 @@ public class MainActivity extends AppCompatActivity {
                     high = emotionScores.happiness;
                 }
                 if (emotionScores.neutral > high) {
-                    emo = "Murderous";
+                    emo = "Calm";
                     high = emotionScores.neutral;
                 }
                 if (emotionScores.sadness > high) {

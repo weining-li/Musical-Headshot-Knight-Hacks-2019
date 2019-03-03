@@ -24,23 +24,24 @@
             android:layout_weight="1"
             android:id="@+id/button1"
             android:text="Browse image"
-            android:color="#66FF0000"
-            android:alpha="0.60"/>
+            android:textColor="#FFFFFF"
+            android:background="@drawable/button_style" />
+
         <Button
             android:id="@+id/button2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@drawable/button_style"
             android:text="Take a picture!"
-            android:color="#66FF0000"
-            android:alpha="0.60"/>
+            android:textColor="#FFFFFF" />
     </LinearLayout>
     <Button android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:id="@+id/button3"
         android:text="Get song"
-        android:color="#66FF0000"
-        android:alpha="0.60"/>
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_style"/>
 
 </RelativeLayout>
